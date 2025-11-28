@@ -39,14 +39,19 @@
     "src"
   ],
   "scripts": {
-    "build": "tsdown",
-    "dev": "tsdown --watch",
+     "dev": "vite",
+    "build": "tsdown && vite build",
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",
     "test": "vitest",
     "typecheck": "tsc -b"
   },
   "devDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
     "@ocavue/eslint-config": "^3.6.3",
     "@ocavue/tsconfig": "^0.6.1",
     "@types/node": "^20.19.10",
