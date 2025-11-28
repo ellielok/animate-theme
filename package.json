@@ -1,18 +1,17 @@
 {
-  "name": "pkg-name",
+  "name": "animate-theme",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@10.23.0",
   "description": "TypeScript starter kit",
-  "author": "ocavue <ocavue@gmail.com>",
+  "author": "Ellie Lok <ellielokit@gmail.com>",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/ocavue",
-  "homepage": "https://github.com/ocavue/pkg-name#readme",
+  "homepage": "https://github.com/ellielok/animate-theme#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ocavue/pkg-name.git"
+    "url": "https://github.com/ellielok/animate-theme.git"
   },
-  "bugs": "https://github.com/ocavue/pkg-name/issues",
+  "bugs": "https://github.com/ellielok/animate-theme/issues",
   "keywords": [],
   "sideEffects": false,
   "main": "./dist/index.js",
