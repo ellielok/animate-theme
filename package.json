@@ -1,7 +1,7 @@
 {
   "name": "animate-theme",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@10.23.0",
   "description": "TypeScript starter kit",
   "author": "Ellie Lok <ellielokit@gmail.com>",
