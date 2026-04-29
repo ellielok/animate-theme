@@ -1,5 +1,3 @@
-import ThemeButton from './Theme';
-
 function Header() {
   return (
     <header className="site-header">
@@ -13,7 +11,6 @@ function Header() {
         <a href="https://www.npmjs.com/package/animate-theme" target="_blank" rel="noreferrer">
           npm
         </a>
-        <ThemeButton />
       </nav>
     </header>
   );

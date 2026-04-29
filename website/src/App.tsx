@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
+import ThemeButton from './Theme';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
       <Header />
       <main className="site-main">
         <h1>Animate Theme</h1>
+        <div className="theme-button-center">
+          <ThemeButton />
+        </div>
         <div className="card">
           <p>
             Traditional light and dark mode toggles usually change theme
