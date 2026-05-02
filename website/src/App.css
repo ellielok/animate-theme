@@ -121,10 +121,54 @@
   }
 }
 
-.theme-button-center {
+.theme-buttons-row {
   display: flex;
   justify-content: center;
+  gap: 2rem;
   margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.theme-button-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-button-label {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Slide transition */
+:root.theme-slide::view-transition-old(root) {
+  animation: slide-out-left 0.35s ease-in-out;
+}
+:root.theme-slide::view-transition-new(root) {
+  animation: slide-in-right 0.35s ease-in-out;
+}
+@keyframes slide-out-left {
+  to { transform: translateX(-100%); }
+}
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+}
+
+/* Circle reveal transition */
+:root.theme-circle::view-transition-old(root) {
+  animation: none;
+  z-index: 0;
+}
+:root.theme-circle::view-transition-new(root) {
+  animation: circle-expand 0.5s ease-in-out;
+  z-index: 1;
+}
+@keyframes circle-expand {
+  from { clip-path: circle(0% at 50% 50%); }
+  to   { clip-path: circle(150% at 50% 50%); }
 }
 
 .card {

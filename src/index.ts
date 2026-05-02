@@ -2,19 +2,40 @@ export const one = 1
 export const two = 2
 
 
-function toggleTheme() {
-  // Fallback for browsers that don't support this API:
-  if (!document.startViewTransition) {
-    toggleClassName();
-    return;
-  }
-
-  // With a View Transition:
-  document.startViewTransition(() => toggleClassName());
-}
-
 function toggleClassName() {
   document.documentElement.classList.toggle('dark');
 }
 
-export { toggleTheme };
+function toggleTheme() {
+  if (!document.startViewTransition) {
+    toggleClassName();
+    return;
+  }
+  document.startViewTransition(() => toggleClassName());
+}
+
+function toggleThemeSlide() {
+  if (!document.startViewTransition) {
+    toggleClassName();
+    return;
+  }
+  document.documentElement.classList.add('theme-slide');
+  const transition = document.startViewTransition(() => toggleClassName());
+  transition.finished.then(() => {
+    document.documentElement.classList.remove('theme-slide');
+  });
+}
+
+function toggleThemeCircle() {
+  if (!document.startViewTransition) {
+    toggleClassName();
+    return;
+  }
+  document.documentElement.classList.add('theme-circle');
+  const transition = document.startViewTransition(() => toggleClassName());
+  transition.finished.then(() => {
+    document.documentElement.classList.remove('theme-circle');
+  });
+}
+
+export { toggleTheme, toggleThemeSlide, toggleThemeCircle };

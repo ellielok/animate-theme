@@ -2,6 +2,8 @@ import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import ThemeButton from './Theme';
+import ThemeSlideButton from './ThemeSlide';
+import ThemeCircleButton from './ThemeCircle';
 
 function App() {
   return (
@@ -9,8 +11,10 @@ function App() {
       <Header />
       <main className="site-main">
         <h1>Animate Theme</h1>
-        <div className="theme-button-center">
+        <div className="theme-buttons-row">
           <ThemeButton />
+          <ThemeSlideButton />
+          <ThemeCircleButton />
         </div>
         <div className="card">
           <p>
